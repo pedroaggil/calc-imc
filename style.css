@@ -1,0 +1,134 @@
+ul {
+    position: absolute;
+    margin-left:unset;
+    margin: 0;
+    top: 46%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+body { background-color: rgba(0, 191, 255, 0.3); font-size: 14pt; }
+
+.main {
+    width: 50vw; height: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.center {
+    margin: 0 auto;
+    width: 40vw;
+}
+
+h1 {
+    background:  linear-gradient(to right, #21B4D0 25%, rgb(0, 191, 255) 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:  transparent;
+}
+
+input[type=number] {
+    border: none;
+    border-radius: 7px;
+    width: 6vw; height: 3.5vh;
+}
+
+input[type=submit], button {
+    border-radius: 10px;
+    width: 8vw; height: 8vh;
+}
+
+hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+span {
+    color: #21b4d0;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.button {
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+    background-color: #21b4d0;
+    color: white;
+}
+
+/* Definição das caixas */
+
+.calc_imc {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.calc_imc:after {
+    content: "";
+    clear: both;
+}
+
+/* Tamanho e aparência base do radio button para gênero */
+.calc-imc {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+    height: 50px;
+    position: relative;
+    width: 105px;
+}
+
+/* Label por cima do radio button */
+
+.calc-imc label {
+    background: #fff no-repeat center center;
+    bottom: 1px;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    left: 1px;
+    position: absolute;
+    right: 1px;
+    text-indent: 100%;
+    top: 1px;
+    white-space: nowrap;
+}
+
+.calc-imc + .calc-imc { margin-left: 25px; }
+
+/* Destaca o input quando selecionado, mudando a borda e adicionando um ícone*/
+
+.calc_imc input:focus + label { outline: 2px dotted #21b4d0; }
+
+.calc_imc input:checked + label { outline: 4px solid #21b4d0; }
+
+.masc label { background-image: url("img/masc.png"); }
+
+.fem label { background-image: url("img/fem.png"); }
+
+/* Adiciona e modela a posição do ícone em questão */
+.calc_imc input:checked + label:after {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+Y2hlY2tlZDwvdGl0bGU+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2tlZCIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEwLjAwNDkyODUsMjAgQzE1LjQ5NTMxNzksMjAgMjAsMTUuNDkzMDk2NiAyMCwxMCBDMjAsNC40OTcwNDE0MiAxNS40OTUzMTc5LDAgOS45OTUwNzE0NiwwIEM0LjUwNDY4MjExLDAgMCw0LjQ5NzA0MTQyIDAsMTAgQzAsMTUuNDkzMDk2NiA0LjUwNDY4MjExLDIwIDEwLjAwNDkyODUsMjAgWiIgZmlsbD0iIzIxQjREMCI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOS4wNDQ0MDE1NCwxNiBDOC41OTA3MzM1OSwxNiA4LjIzMzU5MDczLDE1Ljc3NDM1OSA3Ljk1MzY2Nzk1LDE1LjQyNTY0MSBMNS4zMzc4Mzc4NCwxMi4xNjQxMDI2IEM1LjA5NjUyNTEsMTEuODc2OTIzMSA1LDExLjYxMDI1NjQgNSwxMS4yOTIzMDc3IEM1LDEwLjYyNTY0MSA1LjUzMDg4ODAzLDEwLjA5MjMwNzcgNi4xNDg2NDg2NSwxMC4wOTIzMDc3IEM2LjUwNTc5MTUxLDEwLjA5MjMwNzcgNi43ODU3MTQyOSwxMC4yNTY0MTAzIDcuMDM2Njc5NTQsMTAuNTUzODQ2MiBMOS4wMjUwOTY1MywxMy4wNTY0MTAzIEwxMi44MTg1MzI4LDYuNjg3MTc5NDkgQzEzLjA5ODQ1NTYsNi4yMzU4OTc0NCAxMy40MTY5ODg0LDYgMTMuODMyMDQ2Myw2IEMxNC40NDAxNTQ0LDYgMTUsNi40ODIwNTEyOCAxNSw3LjE0ODcxNzk1IEMxNSw3LjQwNTEyODIxIDE0LjkwMzQ3NDksNy42OTIzMDc2OSAxNC43MzkzODIyLDcuOTU4OTc0MzYgTDEwLjEyNTQ4MjYsMTUuMzY0MTAyNiBDOS44NjQ4NjQ4NiwxNS43NTM4NDYyIDkuNDY5MTExOTcsMTYgOS4wNDQ0MDE1NCwxNiBaIiBpZD0iUGF0aCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+    bottom: -10px;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    position: absolute;
+    right: -10px;
+    width: 20px;
+}
+
+footer { /* Rodapé ao fim da página */
+    padding: 5px;
+    text-align: center;
+    color: #322D36;
+    font: italic 12pt sans-serif;
+}

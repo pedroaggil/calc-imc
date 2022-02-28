@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Índice de Massa Corporal</title>
+</head>
+<body>
+	<div class="main"><br>
+	<h1>Calculadora de IMC</h1>
+	<form method="post" action="loading.php">
+		<legend><p>Qual seu gênero?</p>
+		<ul class="calc_imc">
+			<li class="calc-imc masc">
+				<input name="calc_imc" type="radio" id="masc" value="masculino">
+				<label for="masc"><b>Masculino</b></label>
+			</li>
+			<li class="calc-imc fem">
+				<input name="calc_imc" type="radio" id="fem" value="feminino">
+				<label for="fem"><b>Feminino</b></label>
+			</li>
+		</ul></legend><br><br><br><br>
+
+		<label for="altura">Altura: 
+			<input type="number" name="altura" id="altura" required="required" placeholder="Ex: 172" min="0" max="400"> cm</label>
+
+		<br><br><hr><br>
+
+		<label for="peso">Peso: 
+		<input type="number" name="peso" required="required" placeholder="Ex: 89,56" min="0" max="600" size="20" id="peso"> kg</label>
+
+		<br><br><hr><br>
+
+		<input type="submit" name="enviar" value="Calcular" class="button">
+
+	</form><br>
+	</div><br>
+	<footer>
+		&copy; 2020 &middot; Pedro Gil &middot; LP
+	</footer>
+</body>
+</html>
